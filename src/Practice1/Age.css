@@ -1,0 +1,21 @@
+#button{
+    border-radius: 25px;
+    width: 100px;
+    height: 30px;
+    background-color: aqua;
+  color: blue;
+}
+#button1{
+    border-radius: 25px;
+    width: 100px;
+    height: 30px;
+    background-color: aqua;
+    color: blue;
+}
+#body{
+   
+    width: 500px;
+    height: 150px;
+    margin-left: 450px;
+    padding: 10px;
+}
