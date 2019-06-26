@@ -3,35 +3,31 @@ import React, { Component } from 'react';
 class Task4 extends Component {
     constructor(props) {  
         super(props);   
-    this.state={ name:'', age:'',city:'',address:'',mobile:'', array:[]   
+    this.state={ name:'', age:'',city:'',address:'',mobile:'', name1:'', age1:'',city1:'', address1:'',mobile:''  
     }
 }
-handleChange=(event)=>{
-    this.setState({[event.target.name]:event.target.value});
-    console.log(this.state.name)
+handleChange=(e)=>{
+         this.setState({[e.target.name]:e.target.value});
 }
 
 handleClick=()=>{
-    document.getElementById('name').innerHTML=this.state.name;
-    document.getElementById('age').innerHTML=this.state.age;
-    document.getElementById('city').innerHTML=this.state.city;
-    document.getElementById('address').innerHTML=this.state.address;
-    document.getElementById('mobile').innerHTML=this.state.mobile;
-}
+       this.setState({name1:this.state.name,age1:this.state.age,city1:this.state.city,address1:this.state.address,mobile1:this.state.mobile,
+       });
+ }
     render() {
         return (
             <div>
-                    <label><b>Name : </b> </label>
-                    <input type='text' name='name' onChange={this.handleChange} ></input><br></br><br></br>
-                    <label><b>Age : </b></label>
-                    <input type='text' name='age' onChange={this.handleChange} ></input><br></br><br></br>
-                    <label><b>City :</b> </label>
-                    <input type='text' name='city' onChange={this.handleChange} ></input><br></br><br></br>
-                    <label><b>Address :</b> </label>
-                    <input type='text' name='address' onChange={this.handleChange} ></input><br></br><br></br>
-                    <label><b>Mobile :</b> </label>
-                    <input type='text' name='mobile' onChange={this.handleChange} ></input><br></br><br></br>
-                    <button type='button' onClick={this.handleClick}>submit</button> 
+                <form>
+                <label>Name</label><br></br>
+                    <input type='text' name='name' onChange={this.handleChange} ></input><br></br>
+                    <label>Age</label><br></br>
+                    <input type='text' name='age' onChange={this.handleChange} ></input><br></br>
+                    <label>City</label><br></br>                    
+                    <input type='text' name='city' onChange={this.handleChange} ></input><br></br>
+                    <label>Address</label><br></br>                     
+                    <input type='text' name='address' onChange={this.handleChange} ></input><br></br>
+                    <label>Mobile</label><br></br>
+                   <input type ='text' name='mobile' onChange={this.handleChange}></input><br></br>                     <button type='button' onClick={this.handleClick}>submit</button>
                 <table>
                     {/* <span>Name</span>
                     <span>Age</span>
@@ -47,11 +43,11 @@ handleClick=()=>{
                     </tr>                
                      
                     <tr>
-                        <th id="name"></th>
-                        <th id="age"></th>
-                        <th id="city"></th>
-                        <th id="address"></th>
-                        <th id="mobile"></th>
+                         <td >{this.state.name1}</td>
+                         <td >{this.state.age1}</td>
+                        <td >{this.state.city1}</td>
+                        <td >{this.state.address1}</td>
+                        <td>{this.state.mobile1}</td>
                     </tr>
 
                     {/* <span id="name">Name</span>
@@ -61,8 +57,78 @@ handleClick=()=>{
                     <span id="mobile">Mobile</span> */}
 
                 </table>
+                </form>
             </div>
         );
     }
 }
 export default Task4;
+
+
+// import React, { Component } from 'react';
+// // var reqobj={};
+// class Task4 extends Component {
+//     constructor(props) {  
+//         super(props);   
+//     this.state={
+//         name:'',
+//         age:'',
+//         city:'',
+//         address:'', 
+//         name1:'',
+//         age1:'',
+//         city1:'',
+//         address1:'',
+ //        mobile1:''
+//     }
+// }
+// handleChange=(e)=>{
+//     this.setState({[e.target.name]:e.target.value});
+    
+// }
+// handleClick=()=>{
+//     this.setState({name1:this.state.name,age1:this.state.age,city1:this.state.city,address1:this.state.address,mobile1:this.state.mobile,
+//     });
+// }
+
+//     render() {
+//         return (
+//             <div >
+//                 <form>
+//                     <label>Name</label><br></br>
+//                     <input type='text' name='name' onChange={this.handleChange} ></input><br></br>
+//                     <label>Age</label><br></br>
+//                     <input type='text' name='age' onChange={this.handleChange} ></input><br></br>
+//                     <label>City</label><br></br>
+//                     <input type='text' name='city' onChange={this.handleChange} ></input><br></br>
+//                     <label>Address</label><br></br>
+//                     <input type='text' name='address' onChange={this.handleChange} ></input><br></br>
+//                     <label>Mobile</label><br></br>
+//                    <input type ='text' name='mobile' onChange={this.handleChange}></input><br></br>
+//                     <button type='button' onClick={this.handleClick}>submit</button>
+//                     {/ <input type='button' onClick={this.handleClick} value="click"></input> /}
+
+//                 </form>
+//                 <div>
+//                 <table>
+//                     <tr>
+//                         <th >NAME</th>
+//                         <th >AGE</th>
+//                         <th >CITY</th>
+//                         <th>ADDRESS</th>
+//                     </tr>
+//                     <tr>
+//                         <td >{this.state.name1}</td>
+//                         <td >{this.state.age1}</td>
+//                         <td >{this.state.city1}</td>
+//                         <td >{this.state.address1}</td>
+//                     </tr>
+//                 </table>
+//                 </div>
+                
+//             </div>
+//         );
+//     }
+// }
+
+// export default Task4;
